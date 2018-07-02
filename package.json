@@ -23,15 +23,18 @@
   },
   "homepage": "https://github.com/now-examples/ghost#readme",
   "engines": {
-    "node": "6"
+    "node": "8"
   },
   "dependencies": {
-    "ghost": "1.4.0"
+    "ghost": "1.*"
   },
   "now": {
     "alias": "now-examples-ghost.now.sh",
     "env": {
       "NODE_ENV": "production"
     }
+  },
+  "devDependencies": {
+    "knex-migrator": "^3.1.6"
   }
 }
