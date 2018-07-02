@@ -20,8 +20,8 @@ $ now
 
 > Example: https://now-examples-ghost.now.sh/
 
-You can tweak the `config.json` file and `content` directory to your liking, and
-then re-deploy by running `now` again.
+You can tweak the `config.*` JSON files and `content` directory to your liking,
+and then re-deploy by running `now` again.
 
 ### A note on Ghost database engines with Now
 
@@ -41,13 +41,16 @@ and when upgrading Ghost.
 #### `mysql` and `postgres`
 
 If you want to use a `mysql` or `postgres` database service, then you'll have
-to update the `config.json` file to point to an externally hosted database.
+to update the config JSON files to point to an externally hosted database.
 If you go this route then your Now deployment is more "live" such that you can
 edit and publish posts without creating a new Now deployment, so the workflow
 looks more like:
 
- * Edit the `config.json` file to point to your database server
+ * Edit the config JSON files to point to your database server
  * Create a Now deployment and re-alias your URL
  * At this point you can go to the admin panel on your Now deploment URL and make desired changes
 
-This paradigm requires a new deployment only when upgrading Ghost, or tweaking database settings.
+This paradigm requires a new deployment only when upgrading Ghost, or tweaking
+database settings. However, you end up losing some of the inherent features of
+unique Now deployments, like being able to easily roll back a change or preview
+changes before aliasing.
